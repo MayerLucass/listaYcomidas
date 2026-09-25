@@ -5,9 +5,10 @@ App para organizar las compras por mes, anotar lo que hay en la despensa y descu
 ## Funciones
 
 - Lista de compras por mes, agrupada por categoría, con cantidad y progreso.
-- Al marcar un producto como comprado, se puede pasarlo a la despensa con **↗**.
+- Al marcar un producto como comprado, se agrega automáticamente a la despensa. Desmarcarlo revierte esa entrada vinculada sin modificar alimentos cargados manualmente. Las compras ya marcadas antes de esta versión se incorporan al abrir la app.
 - Despensa con buscador, cantidades y avisos de vencimiento.
-- Recetas que priorizan ingredientes disponibles y permiten agregar faltantes a la lista actual.
+- Recetas que priorizan ingredientes disponibles, muestran qué hay y qué falta, y permiten agregar los faltantes a la lista actual. La sección espera alimentos en la despensa antes de proponer platos.
+- Diseño renovado con una paleta cálida y tarjetas adaptadas a celular y computadora.
 - Ideas personalizadas con IA cuando se configura el servidor.
 - Datos guardados en `localStorage` del navegador. En otro dispositivo o navegador, la lista es independiente.
 

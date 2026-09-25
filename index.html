@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f6f2e9">
+  <meta name="theme-color" content="#342c3a">
   <meta name="description" content="Tu lista mensual, tu despensa y comidas posibles con lo que tenés en casa.">
-  <title>En casa · Compras y comidas</title>
+  <title>En casa · Tu cocina organizada</title>
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles.css">
@@ -21,28 +21,28 @@
         <a href="#despensa" data-nav="despensa"><span>▤</span> Despensa</a>
         <a href="#comidas" data-nav="comidas"><span>✳</span> Qué cocinar</a>
       </nav>
-      <div class="sidebar-note"><span class="note-spark">✦</span><strong>Una casa más organizada.</strong><p>Guardá lo que necesitás, aprovechá lo que ya tenés y decidí qué cocinar.</p></div>
+      <div class="sidebar-note"><span class="note-spark">✦</span><strong>Una cocina con más ideas.</strong><p>Guardá lo que necesitás, aprovechá lo que ya tenés y decidí qué cocinar.</p></div>
       <div class="sidebar-bottom">Tus datos se guardan en este dispositivo.</div>
     </aside>
 
     <main class="main">
       <header class="topbar"><div class="mobile-brand">✳ <strong>en casa</strong></div><span class="topbar-date" id="today"></span><span class="topbar-pill">● Tu espacio</span></header>
       <section id="inicio" class="view active" aria-labelledby="home-title">
-        <div class="welcome"><div><div class="eyebrow">TU HOGAR, MÁS SIMPLE</div><h1 id="home-title">Todo en su lugar.<br><em>Y algo rico en la mesa.</em></h1><p>Organizá las compras del mes y encontrá ideas para cocinar con lo que tenés.</p><button class="button button-dark" data-go="compras">Armar mi lista <span>↗</span></button></div><div class="welcome-art" aria-hidden="true"><span class="plate">🍋</span><span class="art-leaf">✳</span><span class="art-note">ideas frescas<br>todos los días</span></div></div>
+        <div class="welcome"><div><div class="eyebrow">TU HOGAR, MÁS SIMPLE</div><h1 id="home-title">Comprá mejor.<br><em>Cociná con lo que tenés.</em></h1><p>Tu lista y tu despensa trabajan juntas. Cada compra que marcás se convierte en una nueva posibilidad para cocinar.</p><button class="button button-dark" data-go="compras">Armar mi lista <span>↗</span></button></div><div class="welcome-art" aria-hidden="true"><span class="plate">🍅</span><span class="art-leaf">✳</span><span class="art-note">del mercado<br>a tu mesa ✦</span></div></div>
         <div class="section-heading"><div><div class="eyebrow">UN VISTAZO</div><h2>Así va tu mes</h2></div><span id="month-label" class="soft-label"></span></div>
         <div class="stats"><article class="stat"><span class="stat-icon cream">☷</span><span>Por comprar</span><strong id="stat-pending">0</strong><small>cosas en tu lista</small></article><article class="stat"><span class="stat-icon mint">▤</span><span>En tu despensa</span><strong id="stat-pantry">0</strong><small>alimentos disponibles</small></article><article class="stat"><span class="stat-icon peach">✳</span><span>Para cocinar</span><strong id="stat-recipes">0</strong><small>ideas con tus alimentos</small></article></div>
         <div class="home-grid"><article class="panel"><div class="panel-head"><div><div class="eyebrow">PENDIENTES</div><h3>Próximas compras</h3></div><button class="text-button" data-go="compras">Ver lista ↗</button></div><div id="home-list"></div></article><article class="panel meal-feature"><div class="eyebrow">IDEA DEL DÍA</div><div class="meal-illustration">🍳</div><h3>¿Qué cocinamos hoy?</h3><p>Te proponemos platos según los ingredientes que ya están en tu cocina.</p><button class="button button-light" data-go="comidas">Ver ideas <span>↗</span></button></article></div>
       </section>
 
-      <section id="compras" class="view" aria-labelledby="shopping-title"><div class="page-heading"><div class="eyebrow">ORGANIZÁ TU MES</div><h1 id="shopping-title">Mi lista de compras<span class="accent-dot">.</span></h1><p>Sumá lo que necesitás cuando te acuerdes. Lo comprado puede pasar directo a tu despensa.</p></div>
+      <section id="compras" class="view" aria-labelledby="shopping-title"><div class="page-heading"><div class="eyebrow">ORGANIZÁ TU MES</div><h1 id="shopping-title">Mi lista de compras<span class="accent-dot">.</span></h1><p>Anotá lo que necesitás cuando te acuerdes. Al marcarlo como comprado, pasa automáticamente a tu despensa.</p></div>
         <div class="toolbar"><div class="month-nav"><button id="prev-month" aria-label="Mes anterior">‹</button><strong id="shopping-month"></strong><button id="next-month" aria-label="Mes siguiente">›</button></div><button class="button button-dark" id="add-shopping">+ Agregar producto</button></div>
         <div class="shopping-summary"><div><span id="shopping-progress-text">0 de 0 comprados</span><span id="shopping-budget"></span></div><div class="progress-track"><div id="shopping-progress"></div></div></div>
-        <div id="shopping-groups" class="groups"></div>
+        <div class="flow-tip"><span>↗</span><div><strong>Del carrito a tu cocina</strong><small>Marcá una compra y aparecerá en la despensa al instante. Si te equivocás, desmarcala para deshacerlo.</small></div></div><div id="shopping-groups" class="groups"></div>
       </section>
 
-      <section id="despensa" class="view" aria-labelledby="pantry-title"><div class="page-heading"><div class="eyebrow">LO QUE YA TENÉS</div><h1 id="pantry-title">Tu despensa<span class="accent-dot">.</span></h1><p>Registrá tus alimentos para tenerlos a mano y recibir ideas de comidas más útiles.</p></div><div class="toolbar"><div class="search-wrap"><span>⌕</span><input id="pantry-search" type="search" placeholder="Buscar en tu despensa" aria-label="Buscar alimentos"></div><button class="button button-dark" id="add-pantry">+ Agregar alimento</button></div><div id="expiring" class="expiry-banner" hidden></div><div id="pantry-grid" class="pantry-grid"></div></section>
+      <section id="despensa" class="view" aria-labelledby="pantry-title"><div class="page-heading"><div class="eyebrow">LO QUE YA TENÉS</div><h1 id="pantry-title">Tu despensa<span class="accent-dot">.</span></h1><p>Tus compras hechas llegan solas acá. También podés cargar lo que ya tenías en casa.</p></div><div class="toolbar"><div class="search-wrap"><span>⌕</span><input id="pantry-search" type="search" placeholder="Buscar en tu despensa" aria-label="Buscar alimentos"></div><button class="button button-dark" id="add-pantry">+ Agregar alimento</button></div><div id="expiring" class="expiry-banner" hidden></div><div id="pantry-grid" class="pantry-grid"></div></section>
 
-      <section id="comidas" class="view" aria-labelledby="meals-title"><div class="page-heading"><div class="eyebrow">COCINÁ CON LO QUE HAY</div><h1 id="meals-title">¿Qué hacemos de comer<span class="accent-dot">?</span></h1><p>Ideas simples que se adaptan a tu despensa. Marcamos lo que te falta para que puedas sumarlo a la lista.</p></div><div class="recipe-toolbar"><div class="segmented" role="group" aria-label="Filtrar comidas"><button data-filter="all" class="selected">Todas</button><button data-filter="ready">Tengo todo</button><button data-filter="almost">Me falta poco</button></div><span id="recipe-count"></span></div><div class="ai-card"><span class="ai-symbol">✦</span><div><strong>¿Querés una idea a tu medida?</strong><p>Pedile ideas a la IA según lo que tenés y tus ganas de cocinar.</p></div><button class="button button-dark" id="ask-ai">Pedir ideas con IA ↗</button></div><div id="ai-result" class="ai-result" hidden></div><div id="recipe-grid" class="recipe-grid"></div></section>
+      <section id="comidas" class="view" aria-labelledby="meals-title"><div class="page-heading"><div class="eyebrow">COCINÁ CON LO QUE HAY</div><h1 id="meals-title">¿Qué hacemos de comer<span class="accent-dot">?</span></h1><p>Tu despensa decide el menú. Mirá qué podés cocinar hoy y sumá a la lista lo que falte.</p></div><div class="recipe-toolbar"><div class="segmented" role="group" aria-label="Filtrar comidas"><button data-filter="all" class="selected">Todas</button><button data-filter="ready">Tengo todo</button><button data-filter="almost">Me falta poco</button></div><span id="recipe-count"></span></div><div class="ai-card"><span class="ai-symbol">✦</span><div><strong>¿Querés una idea a tu medida?</strong><p>Pedile ideas a la IA según lo que tenés y tus ganas de cocinar.</p></div><button class="button button-dark" id="ask-ai">Pedir ideas con IA ↗</button></div><div id="ai-result" class="ai-result" hidden></div><div id="recipe-grid" class="recipe-grid"></div></section>
     </main>
   </div>
   <nav class="mobile-nav" aria-label="Navegación móvil"><a href="#inicio" data-nav="inicio">◫<span>Inicio</span></a><a href="#compras" data-nav="compras">☷<span>Lista</span></a><a href="#despensa" data-nav="despensa">▤<span>Despensa</span></a><a href="#comidas" data-nav="comidas">✳<span>Comidas</span></a></nav>
